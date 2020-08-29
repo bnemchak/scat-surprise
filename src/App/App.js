@@ -1,12 +1,18 @@
 import React from 'react';
-import './App.scss';
+import firebase from 'firebase/app';
+import 'firebase/auth';
+
+import fbConnection from '../helpers/data/connection';
+
+import MyNavbar from '../components/pages/MyNavbar/MyNavbar';
+
+fbConnection();
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h2>Scat Surprise</h2>
-        <button className="btn btn-secondary">I am a button</button>
+        <MyNavbar />
       </div>
     );
   }
